@@ -1,0 +1,1 @@
+export { splide } from './splide';

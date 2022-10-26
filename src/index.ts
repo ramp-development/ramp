@@ -1,7 +1,12 @@
-import { greetUser } from '$utils/greet';
+import * as sitewide from './sitewide';
+import * as utils from './utils';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
-  const name = 'John Doe';
-  greetUser(name);
+  gsap.registerPlugin(ScrollTrigger);
+  sitewide.nav();
+  sitewide.modal();
+  sitewide.forms();
+
+  if (document.querySelector('.splide')) utils.splide();
 });
