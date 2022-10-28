@@ -2,10 +2,7 @@ export const launchConfetti = () => {
   const duration = 1 * 1000;
   const end = Date.now() + duration;
 
-  // confetti();
-
   (function frame() {
-    // launch a few confetti from the left edge
     confetti({
       particleCount: 7,
       angle: 60,
@@ -13,7 +10,6 @@ export const launchConfetti = () => {
       origin: { x: 0, y: 0.75 },
       disableForReducedMotion: true,
     });
-    // and launch a few from the right edge
     confetti({
       particleCount: 7,
       angle: 120,
@@ -22,7 +18,6 @@ export const launchConfetti = () => {
       disableForReducedMotion: true,
     });
 
-    // keep going until we are out of time
     if (Date.now() < end) {
       requestAnimationFrame(frame);
     }

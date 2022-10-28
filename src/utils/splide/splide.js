@@ -37,5 +37,20 @@ export const splide = () => {
 
       setCounter(counter, newIndex, noSlides);
     });
+
+    const splideObserver = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting === true) {
+          const images = [...entries[0].target.querySelectorAll('img')];
+          images.forEach((image) => {
+            image.setAttribute('loading', 'eager');
+          });
+          splideObserver.unobserve(entries[0].target);
+        }
+      },
+      { threshold: [0] }
+    );
+
+    splideObserver.observe(splide);
   });
 };
