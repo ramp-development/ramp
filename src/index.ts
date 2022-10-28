@@ -9,4 +9,11 @@ window.Webflow.push(() => {
   sitewide.forms();
 
   if (document.querySelector('.splide')) utils.splide();
+
+  const confettiTriggers = [...document.querySelectorAll('.confetti_trigger')];
+  confettiTriggers.forEach((trigger) => {
+    trigger.onclick = () => {
+      utils.launchConfetti();
+    };
+  });
 });
