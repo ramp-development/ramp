@@ -41,7 +41,6 @@ export const modal = () => {
     // allow escape key to close insiders div
     const esc = (event) => {
       if (event.keyCode !== 27) return;
-      console.log('esc');
       simulateEvent(document.querySelector('[data-trigger="close"]'), 'click');
       // simulateEvent(modalToggle, 'click');
       // toggleOverflow();
