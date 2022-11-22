@@ -18,7 +18,7 @@ export const splide = () => {
     if (splide.classList.contains('is-testimonials')) {
       options.type = 'loop';
       options['focus'] = 'center';
-      options['gap'] = '0.5rem';
+      options['gap'] = '1.5rem';
     }
 
     const slider = new Splide(splide, options).mount();
