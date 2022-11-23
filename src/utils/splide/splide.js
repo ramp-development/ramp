@@ -19,6 +19,11 @@ export const splide = () => {
       options.type = 'loop';
       options['focus'] = 'center';
       options['gap'] = '1.5rem';
+      options['breakpoints'] = {
+        768: {
+          gap: '0.5rem',
+        },
+      };
     }
 
     const slider = new Splide(splide, options).mount();
